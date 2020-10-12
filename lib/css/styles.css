@@ -76,6 +76,14 @@ body {
   background-color: #293543;
 }
 
+.small-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ff0000;
+}
+
 .big-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
