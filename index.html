@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./lib/css/styles.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <header class="header">
+      <div>
+        Patient Name:
+        <span class="banner-value" id="patient_name">..</span>
+        Gender:
+        <span class="banner-value" id="gender">..</span>
+        DOB:
+        <span class="banner-value" id="dob">..</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-overview">
+        <div class="small-card">
+          <div>Systolic Blood Pressure</div>
+          <div class="ob-value" id="sys">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>Diastolic Blood Pressure</div>
+          <div class="ob-value" id="dia">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>Last Pain Score</div>
+          <div class="ob-value" id="lastPain">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>This Pain Score</div>
+          <div class="ob-value" id="thisPain">undefined</div>
+        </div>
+        <div class="small-card">
+          <div id="painIncrease"></div>
+          <div class="ob-value" id="painChange">undefined</div>
+        </div>
+        <div class="small-card">
+          <div id="s_bpChange"></div>
+          <div class="ob-value" id="d_bpChange">undefined</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src='./lib/js/fhir-client.js'></script>
+  <script src="./lib/js/get-data-test.js"></script>
+
+  <!-- uncomment below script and comment above script to switch for easy local testing -->
+  <!-- <script src="./lib/js/get-data-test.js"></script> -->
+</body>
+
+</html>

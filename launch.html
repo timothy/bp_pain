@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--
+      Temporarily disable cerner-smart-embeddable-lib
+      <link rel='stylesheet' type='text/css' href='./lib/css/cerner-smart-embeddable-lib-1.0.0.min.css'>
+    -->
+  <title>Example-SMART-App</title>
+</head>
+
+<body>
+  <!-- Required JS files to enable this page to embed within an MPage -->
+  <!--
+      Temporarily disable cerner-smart-embeddable-lib
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js'></script>
+      <script src='./lib/js/cerner-smart-embeddable-lib-1.0.0.min.js'></script>
+    -->
+
+  <!-- FHIR Client JS Library -->
+  <script src='./lib/js/fhir-client.js'></script>
+
+  <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
+  <!-- https://github.com/cerner/fhir-client-cerner-additions -->
+  <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
+  <script>
+    FHIR.oauth2.authorize({
+      'client_id': 'ab237d07-7db8-4ebc-97f6-490a34b57100',
+      'scope': 'patient/Patient.read patient/Patient.write patient/Observation.read patient/Observation.write patient/MedicationRequest.read launch online_access openid profile'
+    });
+  </script>
+
+</body>
+
+</html>
